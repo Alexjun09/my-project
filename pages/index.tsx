@@ -3,6 +3,16 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import kyotoLogo from '../src/logo.webp'
+import discordFav from '../src/discord.png'
+import twitterFav from '../src/twitter.png'
+import instagramFav from '../src/instagram.png'
+import youtubeFav from '../src/youtube.png'
+import linkedinFav from '../src/linkedin.png'
+import telegramFav from '../src/telegram-plane.png'
+
+
+
+
 
 export default function Home() {
   return (
@@ -22,40 +32,92 @@ export default function Home() {
           />
         </div>
         <div className='float-left p-6'>
-          <p className='w-24 float-left'><a>Trade</a></p>
-          <p className='w-24 float-left'><a>Earn</a></p>
-          <p className='w-24 float-left'><a>Win</a></p>
-          <p className='w-24 float-left'><a>Impact</a></p>
-          <p className='w-24 float-left'><a>bridge</a></p>
-          <p className='w-24 float-left'><a>Info</a></p>
-          <p className='w-24 float-left'><a>Launch</a></p>
+          <p className='w-24 float-left text-white text-xl'><a><b>Trade</b></a></p>
+          <p className='w-24 float-left text-white text-xl'><a><b>Earn</b></a></p>
+          <p className='w-24 float-left text-white text-xl'><a><b>Win</b></a></p>
+          <p className='w-24 float-left text-white text-xl'><a><b>Impact</b></a></p>
+          <p className='w-24 float-left text-white text-xl'><a><b>bridge</b></a></p>
+          <p className='w-24 float-left text-white text-xl'><a><b>Info</b></a></p>
+          <p className='w-24 float-left text-white text-xl'><a><b>Launch</b></a></p>
         </div>
-        <div className='float-right px-8 py-4'>
-          <button className='border border-black bg-yellow-600 rounded-full h-12 w-44'>Connect Wallet</button>
+        <div className='h-20 w-2/5 float-right'>
+          <div className='h-20 pt-4 float-right mx-3'>
+            <button className='border-2 border-yellow-600 bg-yellow-600 rounded-full h-12 w-44 float-right'>Connect Wallet</button>
+          </div>
+          <div className='h-20 pt-4 float-right ml-3'>
+            <button className='border-2 text-white border-yellow-600 rounded-full h-12 w-28 float-right'><b>Price</b></button>
+          </div>
+          <div className='h-20 pt-4 float-right'>
+            <button className='border-2 text-white border-yellow-600 rounded-full h-12 w-28 float-right'><b>Vault</b></button>
+          </div>
         </div>
       </header>
-      <br />
-      <main>
-        <p>DECENTRALISED,
 
-        </p>
-        <p>SUSTAINABLE,
-
-        </p>
-        <p>SOCIALLY
-
-        </p>
-        <p>RESPONSIBLE
-
-        </p>
-        <p>TRADE, EARN, WIN AND HELP
-        </p>
-        <p>MAKE A POSITIVE IMPACT.
-
-        </p>
-        <button>Buy Kswap</button>
-        <button>Trade Now</button>
-      </main>
+      <div className='h-screen w-1920 bg-green-700'>
+        <hr className=' border-green-300'/>
+        <div className='h-full w-10 float-left'> {/* social media bar*/}
+          <div className='mt-80'>
+            <div className=''>
+              <Image className='px-1 mt-2'
+                src={twitterFav}
+                alt="Twitter"
+                height={30}
+              />
+            </div>
+            <div>
+              <Image className='px-1 mt-2'
+                src={instagramFav}
+                alt="Intagram"
+                height={30}
+              />
+            </div>
+            <div>
+              <Image className='px-1 mt-2'
+                src={telegramFav}
+                alt="Telegram"
+                height={30}
+              />
+            </div>
+            <div>
+              <Image className='px-1 mt-2'
+                src={youtubeFav}
+                alt="YouTube"
+                height={30}
+              />
+            </div>
+            <div>
+              <Image className='px-1 mt-2'
+                src={discordFav}
+                alt="Discord"
+                height={30}
+              />
+            </div>
+            <div>
+              <Image className='px-1 mt-2'
+                src={linkedinFav}
+                alt="LinkedIn"
+                height={30}
+              />
+            </div>
+          </div>
+        </div>
+        <main className='float-left w-max'>
+          <div className='p-28 w-auto'>
+            <p className='text-7xl py-2 text-white'><b>DECENTRALISED</b>,</p>
+            <p className='text-7xl py-2 text-white'><b>SUSTAINABLE,</b></p>
+            <p className='text-7xl py-2 text-yellow-600'><b>SOCIALLY</b></p>
+            <p className='text-7xl py-2 text-yellow-600'><b>RESPONSIBLE</b></p>
+            <p className='text-white text-3xl pt-6'>TRADE, EARN, WIN AND HELP</p>
+            <p className='text-white text-3xl pb-2'>MAKE A POSITIVE IMPACT.</p>
+            <div className='w-56 float-left h-16'>
+              <button className='bg-yellow-600 w-56 h-full rounded-full text-3xl text-green-700 mt-6'><b>Buy Kswap</b></button>
+            </div>
+            <div className='w-2/4 float-left h-16 px-2'>
+              <button className='bg-green-300 w-56 h-full rounded-full text-3xl text-green-700 mt-6'><b>Trade Now</b></button>
+            </div>
+          </div>
+        </main>
+      </div>
     </>
   )
 }
