@@ -1,21 +1,24 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import kyotoLogo from '../src/logo.webp'
-import discordFav from '../src/discord.png'
-import twitterFav from '../src/twitter.png'
-import instagramFav from '../src/instagram.png'
-import youtubeFav from '../src/youtube.png'
-import linkedinFav from '../src/linkedin.png'
-import telegramFav from '../src/telegram-plane.png'
-import backgroundImage from '../src/background.svg'
-import logoGreen from '../src/logo-green.webp'
-import planeta from '../src/planeta.png'
-import monedas from '../src/monedas.webp'
-import logoProtocol from '../src/logo-protocol.webp'
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import kyotoLogo from "../src/logo.webp";
+import discordFav from "../src/discord.png";
+import twitterFav from "../src/twitter.png";
+import instagramFav from "../src/instagram.png";
+import youtubeFav from "../src/youtube.png";
+import linkedinFav from "../src/linkedin.png";
+import telegramFav from "../src/telegram-plane.png";
+import backgroundImage from "../src/background.svg";
+import logoGreen from "../src/logo-green.webp";
+import planeta from "../src/planeta.png";
+import monedas from "../src/monedas.webp";
+import logoProtocol from "../src/logo-protocol.webp";
 
+function alerta() {
+  window.alert("Hola!");
+}
 
 export default function Home() {
   return (
@@ -27,9 +30,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="bg-green-700 h-20 w-screen flex flex-row">
-        <div className='h-full float-left'>
+        <div className="h-full float-left">
           <Link href="/">
-            <Image className='px-8 py-5'
+            <Image
+              className="px-8 py-5"
               src={kyotoLogo}
               alt="kyoto Logo"
               height={60}
@@ -37,119 +41,152 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className='h-full'>
-          <nav className='h-10 m-5'>
-            <ul className='flex flex-row gap-1  text-center'>
-              <li className='dropdown dropdown-hover w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600'>
-                <div className=' w-full h-full '>
-                  <label tabIndex={0} className='text-2xl text-white'>Trade</label>
+        <div className="h-full">
+          <nav className="h-10 m-5">
+            <ul className="flex flex-row gap-1  text-center">
+              <li className="dropdown dropdown-hover w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600">
+                <div className=" w-full h-full ">
+                  <label tabIndex={0} className="text-2xl text-white">
+                    Trade
+                  </label>
                 </div>
-                <ul className='dropdown-content menu p-2 shadow bg-primary border-0 rounded-box w-24 text-white text-xl '>
-                  <li className='hover:bg-green-600'><a href="/swap">Swap</a></li>
-                  <li className='hover:bg-green-600'>Liquidity</li>
-                  <li className='hover:bg-green-600'>OTC</li>
+                <ul className="dropdown-content menu p-2 shadow bg-primary border-0 rounded-box w-24 text-white text-xl ">
+                  <li className="hover:bg-green-600">
+                    <Link href="/swap">Swap</Link>
+                  </li>
+                  <li className="hover:bg-green-600">Liquidity</li>
+                  <li className="hover:bg-green-600">OTC</li>
                 </ul>
               </li>
-              <li className='dropdown dropdown-hover w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600'>
-                <div className=' w-full h-full '>
-                  <label tabIndex={0} className='text-2xl text-white '>Earn</label>
+              <li className="dropdown dropdown-hover w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600">
+                <div className=" w-full h-full ">
+                  <label tabIndex={0} className="text-2xl text-white ">
+                    Earn
+                  </label>
                 </div>
-                <ul className='dropdown-content menu p-2 shadow bg-primary rounded-box w-24 text-white text-xl'>
-                  <li className='hover:bg-green-600'>Farms</li>
-                  <li className='hover:bg-green-600'>Pools</li>
-                  <li className='hover:bg-green-600'>DV</li>
+                <ul className="dropdown-content menu p-2 shadow bg-primary rounded-box w-24 text-white text-xl">
+                  <li className="hover:bg-green-600">Farms</li>
+                  <li className="hover:bg-green-600">Pools</li>
+                  <li className="hover:bg-green-600">DV</li>
                 </ul>
               </li>
-              <li className='dropdown dropdown-hover w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600'>
-                <div className=' w-full h-full '>
-                  <label tabIndex={0} className='text-2xl text-white '>Win</label>
+              <li className="dropdown dropdown-hover w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600">
+                <div className=" w-full h-full ">
+                  <label tabIndex={0} className="text-2xl text-white ">
+                    Win
+                  </label>
                 </div>
-                <ul className='dropdown-content menu p-2 shadow bg-primary rounded-box w-24 text-white text-xl '>
-                  <li className='hover:bg-green-600'>Rafflez</li>
+                <ul className="dropdown-content menu p-2 shadow bg-primary rounded-box w-24 text-white text-xl ">
+                  <li className="hover:bg-green-600">Rafflez</li>
                 </ul>
               </li>
-              <li className='w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600'>
-                <div className=' w-full h-full '>
-                  <label tabIndex={0} className='text-2xl text-white '>Impact</label>
+              <li className="w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600">
+                <div className=" w-full h-full ">
+                  <label
+                    tabIndex={0}
+                    className="text-2xl text-white"
+                    onClick={() => alerta}
+                  >
+                    Impact
+                  </label>
                 </div>
               </li>
-              <li className='w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600'>
-                <div className=' w-full h-full '>
-                  <label tabIndex={0} className='text-2xl text-white '>Bridge</label>
+              <li className="w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600">
+                <div className=" w-full h-full ">
+                  <label tabIndex={0} className="text-2xl text-white ">
+                    Bridge
+                  </label>
                 </div>
               </li>
-              <li className='dropdown dropdown-hover w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600'>
-                <div className=' w-full h-full '>
-                  <label tabIndex={0} className='text-2xl text-white '>Info</label>
+              <li className="dropdown dropdown-hover w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600">
+                <div className=" w-full h-full ">
+                  <label tabIndex={0} className="text-2xl text-white ">
+                    Info
+                  </label>
                 </div>
-                <ul className='dropdown-content menu p-2 shadow bg-primary rounded-box w-24 text-white text-xl'>
-                  <li className='hover:bg-green-600'>Docs</li>
+                <ul className="dropdown-content menu p-2 shadow bg-primary rounded-box w-24 text-white text-xl">
+                  <li className="hover:bg-green-600">Docs</li>
                 </ul>
               </li>
-              <li className='w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600'>
-                <div className=' w-full h-full '>
-                  <label tabIndex={0} className='text-2xl text-white '>Launch</label>
+              <li className="w-24 h-10 border-0  rounded-full hover:shadow hover:bg-green-600">
+                <div className=" w-full h-full ">
+                  <label tabIndex={0} className="text-2xl text-white ">
+                    Launch
+                  </label>
                 </div>
               </li>
             </ul>
           </nav>
         </div>
 
-        <div className='h-full flex flex-row ml-auto'>
-          <div className='h-20 pt-4 float-right'>
-            <button className='border-2 text-white border-yellow-600 rounded-full h-12 w-28 float-right'><b>Vault</b></button>
+        <div className="h-full flex flex-row ml-auto">
+          <div className="h-20 pt-4 float-right">
+            <button className="border-2 text-white border-yellow-600 rounded-full h-12 w-28 float-right">
+              <b>Vault</b>
+            </button>
           </div>
-          <div className='h-20 pt-4 float-right ml-3'>
-            <button className='border-2 text-white border-yellow-600 rounded-full h-12 w-28 float-right'><b>Price</b></button>
+          <div className="h-20 pt-4 float-right ml-3">
+            <button className="border-2 text-white border-yellow-600 rounded-full h-12 w-28 float-right">
+              <b>Price</b>
+            </button>
           </div>
-          <div className='h-20 pt-4 float-right mx-3'>
-            <button className='border-2 border-yellow-600 bg-yellow-600 rounded-full h-12 w-44 float-right'>Connect Wallet</button>
+          <div className="h-20 pt-4 float-right mx-3">
+            <button className="border-2 border-yellow-600 bg-yellow-600 rounded-full h-12 w-44 float-right">
+              Connect Wallet
+            </button>
           </div>
         </div>
-
       </header>
 
-      <main className='h-screen w-screen bg-green-700'>
-        <hr className=' border-green-300' />
-        <div className='h-full w-10 float-left'> {/* social media bar*/}
-          <div className='mt-80'>
-            <div className=''>
-              <Image className='px-1 mt-2'
+      <main className="h-screen w-screen bg-green-700">
+        <hr className=" border-green-300" />
+        <div className="h-full w-10 float-left">
+          {" "}
+          {/* social media bar*/}
+          <div className="mt-80">
+            <div className="">
+              <Image
+                className="px-1 mt-2"
                 src={twitterFav}
                 alt="Twitter"
                 height={30}
               />
             </div>
             <div>
-              <Image className='px-1 mt-2'
+              <Image
+                className="px-1 mt-2"
                 src={instagramFav}
                 alt="Intagram"
                 height={30}
               />
             </div>
             <div>
-              <Image className='px-1 mt-2'
+              <Image
+                className="px-1 mt-2"
                 src={telegramFav}
                 alt="Telegram"
                 height={30}
               />
             </div>
             <div>
-              <Image className='px-1 mt-2'
+              <Image
+                className="px-1 mt-2"
                 src={youtubeFav}
                 alt="YouTube"
                 height={30}
               />
             </div>
             <div>
-              <Image className='px-1 mt-2'
+              <Image
+                className="px-1 mt-2"
                 src={discordFav}
                 alt="Discord"
                 height={30}
               />
             </div>
             <div>
-              <Image className='px-1 mt-2'
+              <Image
+                className="px-1 mt-2"
                 src={linkedinFav}
                 alt="LinkedIn"
                 height={30}
@@ -157,110 +194,139 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='p-28'>
-          <p className='text-7xl py-2 text-white'><b>DECENTRALISED</b>,</p>
-          <p className='text-7xl py-2 text-white'><b>SUSTAINABLE,</b></p>
-          <p className='text-7xl py-2 text-yellow-600'><b>SOCIALLY</b></p>
-          <p className='text-7xl py-2 text-yellow-600'><b>RESPONSIBLE</b></p>
-          <p className='text-white text-3xl pt-6'>TRADE, EARN, WIN AND HELP</p>
-          <p className='text-white text-3xl pb-2'>MAKE A POSITIVE IMPACT.</p>
-          <div className='w-56 float-left h-16'>
-            <button className='bg-yellow-600 w-56 h-full rounded-full text-3xl text-green-700 mt-6'><b>Buy Kswap</b></button>
+        <div className="p-28">
+          <p className="text-7xl py-2 text-white">
+            <b>DECENTRALISED</b>,
+          </p>
+          <p className="text-7xl py-2 text-white">
+            <b>SUSTAINABLE,</b>
+          </p>
+          <p className="text-7xl py-2 text-yellow-600">
+            <b>SOCIALLY</b>
+          </p>
+          <p className="text-7xl py-2 text-yellow-600">
+            <b>RESPONSIBLE</b>
+          </p>
+          <p className="text-white text-3xl pt-6">TRADE, EARN, WIN AND HELP</p>
+          <p className="text-white text-3xl pb-2">MAKE A POSITIVE IMPACT.</p>
+          <div className="w-56 float-left h-16">
+            <button className="bg-yellow-600 w-56 h-full rounded-full text-3xl text-green-700 mt-6">
+              <b>Buy Kswap</b>
+            </button>
           </div>
-          <div className='w-2/4 float-left h-16 px-2'>
-            <button className='bg-green-300 w-56 h-full rounded-full text-3xl text-green-700 mt-6'><b>Trade Now</b></button>
+          <div className="w-2/4 float-left h-16 px-2">
+            <button className="bg-green-300 w-56 h-full rounded-full text-3xl text-green-700 mt-6">
+              <b>Trade Now</b>
+            </button>
           </div>
         </div>
         {/** As seen on label*/}
-        <div className='text-center mt-[235px]'>
-          <label className='h-14 text-3xl text-yellow-600 bg-green-700 p-4 text-center rounded-full'><b><i>AS SEEN ON</i></b></label>
+        <div className="text-center mt-[235px]">
+          <label className="h-14 text-3xl text-yellow-600 bg-green-700 p-4 text-center rounded-full">
+            <b>
+              <i>AS SEEN ON</i>
+            </b>
+          </label>
         </div>
       </main>
 
       {/** partners */}
-      <div className='h-28 bg-green-300'>
-
-      </div>
+      <div className="h-28 bg-green-300"></div>
       {/** become carbon neutral passively */}
-      <div className='h-[2400px] bg-white'>
+      <div className="h-[2400px] bg-white">
         {/** img + become carbon neutral pasively */}
-        <div className='pt-44 text-center'>
-          <div className=''>
-            <Image className='ml-[42%]'
+        <div className="pt-44 text-center">
+          <div className="">
+            <Image
+              className="ml-[42%]"
               src={logoGreen}
               alt={"kyoto logotype"}
               height={80}
             />
           </div>
-          <p className='mt-10 text-green-700 text-7xl'><b>BECOME CARBON</b></p>
-          <p className='text-green-700 text-7xl pt-4'><b>NEUTRAL</b></p>
-          <p className='p-12 text-green-300 text-7xl'><b><i>PASIVELY</i></b></p>
-          <p className='text-green-700 text-2xl '>Kyoto Swap is the first decentralized exchange (DEX) that allows</p>
-          <p className='text-green-700 text-2xl '>anybody to become carbon neutral at little to no cost</p>
-          <div className='bg-green-700 w-96 h-12 text-2xl text-yellow-600 pt-1 rounded-full ml-[41%] mt-9'>
-            <label htmlFor="" className=''><b>MAKE AN IMPACT</b></label>
+          <p className="mt-10 text-green-700 text-7xl">
+            <b>BECOME CARBON</b>
+          </p>
+          <p className="text-green-700 text-7xl pt-4">
+            <b>NEUTRAL</b>
+          </p>
+          <p className="p-12 text-green-300 text-7xl">
+            <b>
+              <i>PASIVELY</i>
+            </b>
+          </p>
+          <p className="text-green-700 text-2xl ">
+            Kyoto Swap is the first decentralized exchange (DEX) that allows
+          </p>
+          <p className="text-green-700 text-2xl ">
+            anybody to become carbon neutral at little to no cost
+          </p>
+          <div className="bg-green-700 w-96 h-12 text-2xl text-yellow-600 pt-1 rounded-full ml-[41%] mt-9">
+            <label htmlFor="" className="">
+              <b>MAKE AN IMPACT</b>
+            </label>
           </div>
         </div>
         {/** stats */}
-        <div className='flex flex-row gap-32 ml-64 mt-56'>
-          <div className='h-96 w-96 bg-yellow-300 rounded-2xl text-green-700 p-8 pt-14'>
-            <p className='text-green-700 text-5xl'>$3,278,429</p>
-            <p className='text-green-700 text-5xl mt-10'>VOLUME</p>
-            <p className='text-green-700 text-5xl'>TRADED</p>
-            <p className='mt-12'>Total Trading volume</p>
+        <div className="flex flex-row gap-32 ml-64 mt-56">
+          <div className="h-96 w-96 bg-yellow-300 rounded-2xl text-green-700 p-8 pt-14">
+            <p className="text-green-700 text-5xl">$3,278,429</p>
+            <p className="text-green-700 text-5xl mt-10">VOLUME</p>
+            <p className="text-green-700 text-5xl">TRADED</p>
+            <p className="mt-12">Total Trading volume</p>
           </div>
-          <div className='h-96 w-96 bg-yellow-300 rounded-2xl text-green-700 p-8 pt-14'>
-            <p className='text-green-700 text-5xl'>20,326</p>
-            <p className='text-green-700 text-5xl mt-10'>TREES</p>
-            <p className='text-green-700 text-5xl'>PLANTED</p>
-            <div className='mt-12'>
-              <a href="" className=''>Verify here</a>
+          <div className="h-96 w-96 bg-yellow-300 rounded-2xl text-green-700 p-8 pt-14">
+            <p className="text-green-700 text-5xl">20,326</p>
+            <p className="text-green-700 text-5xl mt-10">TREES</p>
+            <p className="text-green-700 text-5xl">PLANTED</p>
+            <div className="mt-12">
+              <a href="" className="">
+                Verify here
+              </a>
             </div>
           </div>
-          <div className='h-96 w-96 bg-yellow-300 rounded-2xl text-green-700 p-8 pt-14'>
-            <p className='text-green-700 text-5xl'>4,383</p>
-            <p className='text-green-700 text-5xl mt-10'>TONNES</p>
-            <p className='text-green-700 text-5xl'>SEQUESTERED</p>
-            <p className='mt-12'>Carbon sequestered by 2050</p>
+          <div className="h-96 w-96 bg-yellow-300 rounded-2xl text-green-700 p-8 pt-14">
+            <p className="text-green-700 text-5xl">4,383</p>
+            <p className="text-green-700 text-5xl mt-10">TONNES</p>
+            <p className="text-green-700 text-5xl">SEQUESTERED</p>
+            <p className="mt-12">Carbon sequestered by 2050</p>
           </div>
         </div>
         {/** planeta*/}
-        <div className='text-center text-green-700'>
-          <div className='mt-36 ml-[42%]'>
-            <Image
-              src={planeta}
-              alt={"planeta png"}
-              height={300}
-            />
+        <div className="text-center text-green-700">
+          <div className="mt-36 ml-[42%]">
+            <Image src={planeta} alt={"planeta png"} height={300} />
           </div>
           {/** OUR PLEDGE*/}
-          <p className='text-6xl my-10'><b>OUR PLEDGE</b></p>
-          <p className='text-2xl'>Kyoto Swap`s unique moular economy allows anyone to become carbon</p>
-          <p className='text-2xl'>neutral at little to no cost. 20% of all platform revenues are allocated</p>
-          <p className='text-2xl'>towards afforestation, further helping in the battle against climate change.</p>
-          <div className='flex flex-row gap-96 text-2xl mt-24 ml-[28%]  text-left'>
-            <div className='flex flex-row bg-yellow-300 rounded-full w-56 h-20'>
-              <div className='h-[40px] w-[40px] m-4 ml-6'>
-                <Image
-                  src={discordFav}
-                  alt={"discord fav"}
-                  height={40}
-                />
+          <p className="text-6xl my-10">
+            <b>OUR PLEDGE</b>
+          </p>
+          <p className="text-2xl">
+            Kyoto Swap`s unique moular economy allows anyone to become carbon
+          </p>
+          <p className="text-2xl">
+            neutral at little to no cost. 20% of all platform revenues are
+            allocated
+          </p>
+          <p className="text-2xl">
+            towards afforestation, further helping in the battle against climate
+            change.
+          </p>
+          <div className="flex flex-row gap-96 text-2xl mt-24 ml-[28%]  text-left">
+            <div className="flex flex-row bg-yellow-300 rounded-full w-56 h-20">
+              <div className="h-[40px] w-[40px] m-4 ml-6">
+                <Image src={discordFav} alt={"discord fav"} height={40} />
               </div>
-              <div className='mt-2'>
+              <div className="mt-2">
                 <p>+5,000</p>
                 <p>MEMBERS</p>
               </div>
             </div>
-            <div className='flex flex-row bg-yellow-300 rounded-full w-56 h-20'>
-              <div className='h-[40px] w-[40px] m-4 ml-6'>
-                <Image
-                  src={twitterFav}
-                  alt={"discord fav"}
-                  height={40}
-                />
+            <div className="flex flex-row bg-yellow-300 rounded-full w-56 h-20">
+              <div className="h-[40px] w-[40px] m-4 ml-6">
+                <Image src={twitterFav} alt={"discord fav"} height={40} />
               </div>
-              <div className='mt-2'>
+              <div className="mt-2">
                 <p>+6,000</p>
                 <p>FOLLOWERS</p>
               </div>
@@ -268,115 +334,131 @@ export default function Home() {
           </div>
         </div>
         {/** As seen on label*/}
-        <div className='text-center mt-36'>
-          <label className='h-14 text-3xl text-yellow-600 bg-green-700 p-4 text-center rounded-full'><b><i>AS SEEN ON</i></b></label>
+        <div className="text-center mt-36">
+          <label className="h-14 text-3xl text-yellow-600 bg-green-700 p-4 text-center rounded-full">
+            <b>
+              <i>AS SEEN ON</i>
+            </b>
+          </label>
         </div>
       </div>
       {/** partners */}
-      <div className='h-28 bg-green-300'>
-
-      </div>
+      <div className="h-28 bg-green-300"></div>
       {/** token */}
-      <div className='h-screen bg-green-700'>
-        <div className='flex flex-row '>
-          <div className='ml-24 mt-28'>
-            <p className='text-yellow-300 text-6xl'><b>THE KYOTOSWAP TOKEN</b></p>
-            <div className='flex flex-row text-4xl my-14'>
-              <p className='text-yellow-300'>SEEDING&nbsp;</p>
-              <p className='text-green-300'>THE FUTURE OF WEB3</p>
+      <div className="h-screen bg-green-700">
+        <div className="flex flex-row ">
+          <div className="ml-24 mt-28">
+            <p className="text-yellow-300 text-6xl">
+              <b>THE KYOTOSWAP TOKEN</b>
+            </p>
+            <div className="flex flex-row text-4xl my-14">
+              <p className="text-yellow-300">SEEDING&nbsp;</p>
+              <p className="text-green-300">THE FUTURE OF WEB3</p>
             </div>
-            <p className='text-white text-3xl mb-2'>The Kyoto swap token is your key to web3 carbon neutrality. Provide liquidity, earn</p>
-            <p className='text-white text-3xl mb-2'>a share of platform profits, and even swap to plant trees. The most conscious</p>
-            <p className='text-white text-3xl mb-20'>KSWAP investors are recorded on the impact leaderboard.</p>
-            <div className='flex flex-row gap-10 text-3xl text-green-700'>
-              <div className='bg-yellow-300 rounded-full p-1 px-4'>
+            <p className="text-white text-3xl mb-2">
+              The Kyoto swap token is your key to web3 carbon neutrality.
+              Provide liquidity, earn
+            </p>
+            <p className="text-white text-3xl mb-2">
+              a share of platform profits, and even swap to plant trees. The
+              most conscious
+            </p>
+            <p className="text-white text-3xl mb-20">
+              KSWAP investors are recorded on the impact leaderboard.
+            </p>
+            <div className="flex flex-row gap-10 text-3xl text-green-700">
+              <div className="bg-yellow-300 rounded-full p-1 px-4">
                 <label htmlFor="">BUY KSWAP</label>
               </div>
-              <div className='bg-yellow-300 rounded-full p-1 px-4'>
+              <div className="bg-yellow-300 rounded-full p-1 px-4">
                 <label htmlFor="">VIEW LEADERBOARD</label>
               </div>
             </div>
           </div>
-          <div className='mt-10'>
-            <Image
-              src={monedas}
-              alt={"monedas"}
-              height={700}
-            />
+          <div className="mt-10">
+            <Image src={monedas} alt={"monedas"} height={700} />
           </div>
         </div>
-        <div className='flex flex-row text-4xl text-yellow-300 ml-20 gap-28 -mt-12'>
-          <div className='border-l-4 w-[400px] pl-8'>
+        <div className="flex flex-row text-4xl text-yellow-300 ml-20 gap-28 -mt-12">
+          <div className="border-l-4 w-[400px] pl-8">
             <p>CIRCULATING SUPPLY</p>
-            <p className='text-white'>137,341</p>
+            <p className="text-white">137,341</p>
           </div>
-          <div className=' border-l-4 w-[400px] pl-8'>
+          <div className=" border-l-4 w-[400px] pl-8">
             <p>TOTAL SUPPLY</p>
-            <p className='text-white'>85,231,604</p>
+            <p className="text-white">85,231,604</p>
           </div>
-          <div className='boder border-l-4 w-[400px] pl-8'>
+          <div className="boder border-l-4 w-[400px] pl-8">
             <p>MAX SUPPLY</p>
-            <p className='text-white'>Dynamic</p>
+            <p className="text-white">Dynamic</p>
           </div>
         </div>
-        <div className='flex flex-row text-4xl text-yellow-300 ml-20 mt-5 gap-28'>
-          <div className=' border-l-4 w-[400px] pl-8'>
+        <div className="flex flex-row text-4xl text-yellow-300 ml-20 mt-5 gap-28">
+          <div className=" border-l-4 w-[400px] pl-8">
             <p>BURNED</p>
-            <p className='text-white'>85,094,263</p>
+            <p className="text-white">85,094,263</p>
           </div>
-          <div className=' border-l-4 w-[400px] pl-8'>
+          <div className=" border-l-4 w-[400px] pl-8">
             <p>MARKET CAP</p>
-            <p className='text-white'>289,950</p>
+            <p className="text-white">289,950</p>
           </div>
-          <div className=' border-l-4 w-[400px] pl-8'>
+          <div className=" border-l-4 w-[400px] pl-8">
             <p>CURRENT EMISSIONS</p>
-            <p className='text-white'>Dynamic</p>
+            <p className="text-white">Dynamic</p>
           </div>
         </div>
       </div>
-      <footer className='h-screen bg-white'>
-        <div className='text-center text-green-700'>
-          <div className='pt-36 ml-[43%]'>
-            <Image
-              src={logoGreen}
-              alt={"logo"}
-              height={80}
-            />
+      <footer className="h-screen bg-white">
+        <div className="text-center text-green-700">
+          <div className="pt-36 ml-[43%]">
+            <Image src={logoGreen} alt={"logo"} height={80} />
           </div>
-          <p className='text-6xl py-4'><b>HELP FIGHT</b></p>
-          <p className='text-6xl py-4'><b>CLIMATE CHANGE</b></p>
-          <p className='text-4xl text-green-300'><i><b>PASSIVELY</b></i></p>
+          <p className="text-6xl py-4">
+            <b>HELP FIGHT</b>
+          </p>
+          <p className="text-6xl py-4">
+            <b>CLIMATE CHANGE</b>
+          </p>
+          <p className="text-4xl text-green-300">
+            <i>
+              <b>PASSIVELY</b>
+            </i>
+          </p>
         </div>
-        <div className='mt-60'>
-          <hr className='w-[80%] ml-[10%] border border-green-700 mb-8' />
-          <div className='flex flex-row gap-60 mx-20'>
-            <div className=''>
-              <div className='pb-8'>
-                <Image
-                  src={logoGreen}
-                  alt={"logo"}
-                  height={50}
-                />
+        <div className="mt-60">
+          <hr className="w-[80%] ml-[10%] border border-green-700 mb-8" />
+          <div className="flex flex-row gap-60 mx-20">
+            <div className="">
+              <div className="pb-8">
+                <Image src={logoGreen} alt={"logo"} height={50} />
               </div>
-              <div className='bg-green-700 rounded-full p-2 px-4'>
-                <label htmlFor="" className='text-yellow-300 text-3xl'><b>BUY KSWAP</b></label>
+              <div className="bg-green-700 rounded-full p-2 px-4">
+                <label htmlFor="" className="text-yellow-300 text-3xl">
+                  <b>BUY KSWAP</b>
+                </label>
               </div>
             </div>
-            <div className='text-m text-green-700'>
-              <p className='mb-1'><b>ABOUT</b></p>
+            <div className="text-m text-green-700">
+              <p className="mb-1">
+                <b>ABOUT</b>
+              </p>
               <p>CONTACT</p>
               <p>BRAND</p>
               <p>BLOG</p>
               <p>COMMUNITY</p>
             </div>
-            <div className='text-m text-green-700'>
-              <p className='mb-1'><b>HELP</b></p>
+            <div className="text-m text-green-700">
+              <p className="mb-1">
+                <b>HELP</b>
+              </p>
               <p>CUSTOMER SUPPORT</p>
               <p>TROUBLESHOOTING</p>
               <p>GUIDES</p>
             </div>
-            <div className='text-m text-green-700'>
-              <p className='mb-1'><b>DEVELOPERS</b></p>
+            <div className="text-m text-green-700">
+              <p className="mb-1">
+                <b>DEVELOPERS</b>
+              </p>
               <p>DOCUMENTATION</p>
               <p>BUG BOUNTY</p>
               <p>AUDITS</p>
@@ -384,44 +466,50 @@ export default function Home() {
             </div>
             <div>
               <div>
-                <div className='flex flex-row'>
-                  <div className=''>
-                    <Image className='px-1 mt-2'
+                <div className="flex flex-row">
+                  <div className="">
+                    <Image
+                      className="px-1 mt-2"
                       src={twitterFav}
                       alt="Twitter"
                       height={30}
                     />
                   </div>
                   <div>
-                    <Image className='px-1 mt-2'
+                    <Image
+                      className="px-1 mt-2"
                       src={instagramFav}
                       alt="Intagram"
                       height={30}
                     />
                   </div>
                   <div>
-                    <Image className='px-1 mt-2'
+                    <Image
+                      className="px-1 mt-2"
                       src={telegramFav}
                       alt="Telegram"
                       height={30}
                     />
                   </div>
                   <div>
-                    <Image className='px-1 mt-2'
+                    <Image
+                      className="px-1 mt-2"
                       src={youtubeFav}
                       alt="YouTube"
                       height={30}
                     />
                   </div>
                   <div>
-                    <Image className='px-1 mt-2'
+                    <Image
+                      className="px-1 mt-2"
                       src={discordFav}
                       alt="Discord"
                       height={30}
                     />
                   </div>
                   <div>
-                    <Image className='px-1 mt-2'
+                    <Image
+                      className="px-1 mt-2"
                       src={linkedinFav}
                       alt="LinkedIn"
                       height={30}
@@ -430,20 +518,15 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <div className='pt-14'>
-                  <Image
-                    src={logoProtocol}
-                    alt={"logoProtocol"}
-                    height={40}
-                  />
+                <div className="pt-14">
+                  <Image src={logoProtocol} alt={"logoProtocol"} height={40} />
                 </div>
               </div>
             </div>
           </div>
-          <hr className='w-[80%] ml-[10%] border border-green-700 mt-8' />
+          <hr className="w-[80%] ml-[10%] border border-green-700 mt-8" />
         </div>
       </footer>
-
     </>
-  )
+  );
 }
