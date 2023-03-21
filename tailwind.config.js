@@ -31,7 +31,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        title: ["clamp(42px,4vw,80px)", "clamp(52px,5vw,90px)"],
+        subtitle: ["clamp(22px,3vw,50px)", "clamp(26px,4vw,90px)"],
+        content: ["clamp(17px,1.5vw,35px)"],
+      },
+    },
   },
   plugins: [require("daisyui")],
 };
